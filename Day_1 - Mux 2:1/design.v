@@ -1,8 +1,8 @@
-module mux 2to1(
+module mux2to1(
   input wire [7:0] a,
   input wire [7:0] b,
   input wire sel,
   output wire [7:0] y
 );
-  assign y = (sel ==1'b0) ? a ; b;
+  assign y = (sel ==1'b0) ? a : b;
 endmodule
