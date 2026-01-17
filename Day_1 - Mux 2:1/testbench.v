@@ -6,13 +6,10 @@ module test();
 
   initial begin
     $dumpfile("dump.vcd"); $dumpvars(1);
-    
-    // Case 1: sel is 0, output should follow 'a'
-    ta = 1; tb = 0; tsel = 0; #10;
-    
-    // Case 2: sel is 1, output should follow 'b'
-    ta = 1; tb = 0; tsel = 1; #10;
-    
+    ta = 0; tb = 0; tsel = 0; #10; //output should be like 'a'
+    ta = 0; tb = 1; tsel = 1; #10; //output should be like 'b'
+    ta = 1; tb = 0; tsel = 1; #10; //output should be like 'b'
+    ta = 1; tb = 1; tsel = 0; #10; //output should be like 'a'    
     $finish;
   end
 endmodule
