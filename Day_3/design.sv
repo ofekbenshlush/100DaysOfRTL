@@ -6,7 +6,7 @@ module(
   output logic falling_edge_o
 );
   logic d_ff;
-  always_ff @(posedge clk or posedge reser)
+  always_ff @(posedge clk or posedge reset)
     if(reset)
       d_ff <= 1'b0;
     else
