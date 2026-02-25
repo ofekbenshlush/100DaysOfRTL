@@ -1,4 +1,5 @@
-module(
+// Code your design here
+module edge_detector(
   input logic clk,
   input logic reset,
   input logic d_i,
