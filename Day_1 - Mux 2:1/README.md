@@ -1,5 +1,7 @@
-Design and verify a 2:1 mux
+#Day 1
 
+Design and verify a 2:1 mux
+#Interface Definition
 The module should have the following interface:
 
 input   wire [7:0]    a_i   - First leg of the mux
