@@ -18,15 +18,11 @@ module edge_detector_tb();
       clk = 0;
       reset = 1'b1;
       d_i = 1'b0;
-
       #20 reset = 1'b0;
-
       #10 d_i = 1'b1;
       #20 d_i = 1'b0;
-
       #15 d_i = 1'b1;
       #5  d_i = 1'b0; 
-
       #30;
       $display("Simulation complete.");
       $finish;
