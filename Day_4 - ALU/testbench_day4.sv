@@ -11,3 +11,19 @@ module ALU_tb();
     .alu_o(alu_o)
   );
   
+ initial begin
+    for (int j =0; j<3; j++) begin
+      for (int i =0; i<7; i++) begin
+        a_i = $urandom_range(0, 8'hFF);
+        b_i = $urandom_range(0, 8'hFF);
+        op_i = 3'(i);
+        #5;
+      end
+    end
+  end
+
+  initial begin
+    $dumpfile("day4.vcd");
+    $dumpvars(0, ALU_tb);
+  end
+endmodule
