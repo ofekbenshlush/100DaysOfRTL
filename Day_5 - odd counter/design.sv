@@ -10,4 +10,3 @@ module odd_counter(
       counter_out <= counter_out + 8'h2;
   end
 endmodule
-  
